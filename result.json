@@ -1,0 +1,958 @@
+[
+    {
+        "keyword": "Feature",
+        "name": "Add a task to the to-do list",
+        "tags": [],
+        "location": "features/add_task_to_do_list.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Adding a task to the to-do list",
+                "tags": [
+                    "addTask"
+                ],
+                "location": "features/add_task_to_do_list.feature:3",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "the to-do list is empty",
+                        "location": "features/add_task_to_do_list.feature:4",
+                        "match": {
+                            "location": "features/steps/scn1_add_task.py:10",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0002789497375488281
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user adds",
+                        "location": "features/add_task_to_do_list.feature:5",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Buy Book: Animal Farm",
+                                    "31-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn1_add_task.py:17",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.003674745559692383
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "the to-do list should contain \"Buy Book: Animal Farm,31-07-2023,LOW\"",
+                        "location": "features/add_task_to_do_list.feature:8",
+                        "match": {
+                            "location": "features/steps/scn1_add_task.py:25",
+                            "arguments": [
+                                {
+                                    "value": "Buy Book: Animal Farm,31-07-2023,LOW",
+                                    "name": "task"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00018262863159179688
+                        }
+                    },
+                    {
+                        "keyword": "And",
+                        "step_type": "then",
+                        "name": "the task added is",
+                        "location": "features/add_task_to_do_list.feature:9",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Buy Book: Animal Farm",
+                                    "31-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn1_add_task.py:35",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00017309188842773438
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Change status of the task.",
+        "tags": [],
+        "location": "features/change_status_to_do_list.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Change status of task.",
+                "tags": [
+                    "changeStatus"
+                ],
+                "location": "features/change_status_to_do_list.feature:3",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "set of to-do list",
+                        "location": "features/change_status_to_do_list.feature:4",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Clean the car",
+                                    "31-07-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "Buy the bottle water",
+                                    "30-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn6_change_status_task.py:10",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00035691261291503906
+                        }
+                    },
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "the user click on status of task",
+                        "location": "features/change_status_to_do_list.feature:8",
+                        "match": {
+                            "location": "features/steps/scn6_change_status_task.py:21",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00012230873107910156
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user select \"Clean the car, NOT_COMPLETED\" Status",
+                        "location": "features/change_status_to_do_list.feature:9",
+                        "match": {
+                            "location": "features/steps/scn6_change_status_task.py:26",
+                            "arguments": [
+                                {
+                                    "value": "Clean the car, NOT_COMPLETED",
+                                    "name": "task"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00020766258239746094
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "the status of task change to \"IN_PROGRESS\" and updated it.",
+                        "location": "features/change_status_to_do_list.feature:10",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Clean the car",
+                                    "31-07-2023",
+                                    "IN_PROGRESS",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "Buy the bottle water",
+                                    "30-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn6_change_status_task.py:35",
+                            "arguments": [
+                                {
+                                    "value": "IN_PROGRESS",
+                                    "name": "status"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00012063980102539062
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Clear the entire to-do list.",
+        "tags": [],
+        "location": "features/clear_to_do_list.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Delete all tasks of to-do list.",
+                "tags": [
+                    "clearTodo"
+                ],
+                "location": "features/clear_to_do_list.feature:3",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "a set list of to-do",
+                        "location": "features/clear_to_do_list.feature:4",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Clean the car",
+                                    "31-07-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "Buy the bottle water",
+                                    "30-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn4_clear_todolist.py:9",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00036215782165527344
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user click on \"Delete All\" icon",
+                        "location": "features/clear_to_do_list.feature:8",
+                        "match": {
+                            "location": "features/steps/scn4_clear_todolist.py:22",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0001227855682373047
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "the todo list should be empty.",
+                        "location": "features/clear_to_do_list.feature:9",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": []
+                        },
+                        "match": {
+                            "location": "features/steps/scn4_clear_todolist.py:28",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00011801719665527344
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Delete task from to do list.",
+        "tags": [],
+        "location": "features/delete_task_to_do_list.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Remove task of to do list.",
+                "tags": [
+                    "deleteTask"
+                ],
+                "location": "features/delete_task_to_do_list.feature:3",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "a set of todo list",
+                        "location": "features/delete_task_to_do_list.feature:4",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Clean the car",
+                                    "31-07-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "Buy the bottle water",
+                                    "30-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/snc8_delete_task.py:9",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0003600120544433594
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user click on \"Delete\" icon on \"Clean the car\" task",
+                        "location": "features/delete_task_to_do_list.feature:8",
+                        "match": {
+                            "location": "features/steps/snc8_delete_task.py:22",
+                            "arguments": [
+                                {
+                                    "value": "Clean the car",
+                                    "name": "description"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00012993812561035156
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "the task \"Clean the car\" should not appear on the todo list.",
+                        "location": "features/delete_task_to_do_list.feature:9",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Buy the bottle water",
+                                    "30-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/snc8_delete_task.py:31",
+                            "arguments": [
+                                {
+                                    "value": "Clean the car",
+                                    "name": "description"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.000125885009765625
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Search by a none existing date",
+        "tags": [],
+        "location": "features/filter_to_do_list_date.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Filter task by a none existing date",
+                "tags": [
+                    "noneDate"
+                ],
+                "location": "features/filter_to_do_list_date.feature:3",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "list to-do",
+                        "location": "features/filter_to_do_list_date.feature:4",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Buy Book: Animal Farm",
+                                    "23-07-2023",
+                                    "COMPLETED",
+                                    "LOW"
+                                ],
+                                [
+                                    "Buy groceries",
+                                    "01-08-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "SE homework",
+                                    "31-07-2023",
+                                    "IN_PROGRESS",
+                                    "HIGH"
+                                ],
+                                [
+                                    "Clean the bathroom",
+                                    "08-08-2023",
+                                    "NOT_COMPLETED",
+                                    "HIGH"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn5_search_by_date.py:9",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0005559921264648438
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user search by a none existing date \"05-06-2020\"",
+                        "location": "features/filter_to_do_list_date.feature:10",
+                        "match": {
+                            "location": "features/steps/scn5_search_by_date.py:25",
+                            "arguments": [
+                                {
+                                    "value": "05-06-2020",
+                                    "name": "task"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00017380714416503906
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "show no task on list",
+                        "location": "features/filter_to_do_list_date.feature:11",
+                        "match": {
+                            "location": "features/steps/scn5_search_by_date.py:33",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00015115737915039062
+                        }
+                    },
+                    {
+                        "keyword": "And",
+                        "step_type": "then",
+                        "name": "to-do list is",
+                        "location": "features/filter_to_do_list_date.feature:12",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": []
+                        },
+                        "match": {
+                            "location": "features/steps/scn5_search_by_date.py:40",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0002009868621826172
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Search by none existing priority",
+        "tags": [],
+        "location": "features/filter_to_do_list_priority.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Filter task by a none existing priority",
+                "tags": [
+                    "nonePriority"
+                ],
+                "location": "features/filter_to_do_list_priority.feature:3",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "to-do list",
+                        "location": "features/filter_to_do_list_priority.feature:4",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Buy groceries",
+                                    "01-08-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "SE homework",
+                                    "31-07-2023",
+                                    "IN_PROGRESS",
+                                    "HIGH"
+                                ],
+                                [
+                                    "Clean the bathroom",
+                                    "08-08-2023",
+                                    "NOT_COMPLETED",
+                                    "HIGH"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn7_non_exist_prio.py:9",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0003902912139892578
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user search by a none existing priority \"LOW\"",
+                        "location": "features/filter_to_do_list_priority.feature:9",
+                        "match": {
+                            "location": "features/steps/scn7_non_exist_prio.py:25",
+                            "arguments": [
+                                {
+                                    "value": "LOW",
+                                    "name": "task"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0001709461212158203
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "show no task on the to-do list",
+                        "location": "features/filter_to_do_list_priority.feature:10",
+                        "match": {
+                            "location": "features/steps/scn7_non_exist_prio.py:33",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00011920928955078125
+                        }
+                    },
+                    {
+                        "keyword": "And",
+                        "step_type": "then",
+                        "name": "the to-do list is",
+                        "location": "features/filter_to_do_list_priority.feature:11",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": []
+                        },
+                        "match": {
+                            "location": "features/steps/scn7_non_exist_prio.py:41",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.000125885009765625
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "Change the description of a task.",
+        "tags": [],
+        "location": "features/mark_task_to_do_list.feature:3",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "Change the description of a task.",
+                "tags": [
+                    "changeDesp"
+                ],
+                "location": "features/mark_task_to_do_list.feature:5",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "a set of tasks on the to-do list",
+                        "location": "features/mark_task_to_do_list.feature:6",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Clean the car",
+                                    "31-07-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "Buy the bottle water",
+                                    "30-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn3_mark_task.py:10",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00035500526428222656
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user select \"Clean the car\" description",
+                        "location": "features/mark_task_to_do_list.feature:10",
+                        "match": {
+                            "location": "features/steps/scn3_mark_task.py:21",
+                            "arguments": [
+                                {
+                                    "value": "Clean the car",
+                                    "name": "description"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00018835067749023438
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "change to name of the description to \"Clean the house\" and updated it.",
+                        "location": "features/mark_task_to_do_list.feature:11",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Clean the house",
+                                    "31-07-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "Buy the bottle water",
+                                    "30-07-2023",
+                                    "NOT_COMPLETED",
+                                    "LOW"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn3_mark_task.py:27",
+                            "arguments": [
+                                {
+                                    "value": "Clean the house",
+                                    "name": "new_description"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00015401840209960938
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    },
+    {
+        "keyword": "Feature",
+        "name": "List all tasks in the to-do list",
+        "tags": [],
+        "location": "features/show_all_task_to_do_list.feature:1",
+        "status": "passed",
+        "elements": [
+            {
+                "type": "scenario",
+                "keyword": "Scenario",
+                "name": "List all task on the to-do list",
+                "tags": [
+                    "listAllTask"
+                ],
+                "location": "features/show_all_task_to_do_list.feature:3",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "step_type": "given",
+                        "name": "the to-do list",
+                        "location": "features/show_all_task_to_do_list.feature:4",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Buy Book: Animal Farm",
+                                    "23-07-2023",
+                                    "COMPLETED",
+                                    "LOW"
+                                ],
+                                [
+                                    "Buy groceries",
+                                    "01-08-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "SE homework",
+                                    "31-07-2023",
+                                    "IN_PROGRESS",
+                                    "HIGH"
+                                ],
+                                [
+                                    "Clean the bathroom",
+                                    "08-08-2023",
+                                    "NOT_COMPLETED",
+                                    "HIGH"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn2_list_task.py:10",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0005397796630859375
+                        }
+                    },
+                    {
+                        "keyword": "When",
+                        "step_type": "when",
+                        "name": "the user wants to see the to-do list",
+                        "location": "features/show_all_task_to_do_list.feature:10",
+                        "match": {
+                            "location": "features/steps/scn2_list_task.py:26",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.0001327991485595703
+                        }
+                    },
+                    {
+                        "keyword": "Then",
+                        "step_type": "then",
+                        "name": "show all the to-do list",
+                        "location": "features/show_all_task_to_do_list.feature:11",
+                        "match": {
+                            "location": "features/steps/scn2_list_task.py:32",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00011873245239257812
+                        }
+                    },
+                    {
+                        "keyword": "And",
+                        "step_type": "then",
+                        "name": "print all the to-do list",
+                        "location": "features/show_all_task_to_do_list.feature:12",
+                        "table": {
+                            "headings": [
+                                "DESCRIPTION",
+                                "DATE",
+                                "STATUS",
+                                "PRIORITY"
+                            ],
+                            "rows": [
+                                [
+                                    "Buy Book: Animal Farm",
+                                    "23-07-2023",
+                                    "COMPLETED",
+                                    "LOW"
+                                ],
+                                [
+                                    "Buy groceries",
+                                    "01-08-2023",
+                                    "NOT_COMPLETED",
+                                    "MEDIUM"
+                                ],
+                                [
+                                    "SE homework",
+                                    "31-07-2023",
+                                    "IN_PROGRESS",
+                                    "HIGH"
+                                ],
+                                [
+                                    "Clean the bathroom",
+                                    "08-08-2023",
+                                    "NOT_COMPLETED",
+                                    "HIGH"
+                                ]
+                            ]
+                        },
+                        "match": {
+                            "location": "features/steps/scn2_list_task.py:38",
+                            "arguments": []
+                        },
+                        "result": {
+                            "status": "passed",
+                            "duration": 0.00026702880859375
+                        }
+                    }
+                ],
+                "status": "passed"
+            }
+        ]
+    }
+]
